@@ -326,3 +326,73 @@ button {
   height: 5px;
   background-color: var(--color-dark-white);
 }
+
+/* Testimonials */
+#testimonials {
+  background-color: var(--color-light-grey);
+}
+
+.testimonials {
+  margin: 32px;
+  padding: 0px;
+}
+
+.testimonial {
+  display: flex;
+}
+.testimonial__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.testimonial__avatar:nth-child(odd){
+  margin-left: 40px;
+}
+.testimonial__avatar:nth-child(even){
+  margin-right: 40px;
+}
+.testimonial__speech-bubble {
+  padding: 18px;
+  background-color: var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+.testimonial__speech-bubble p{
+  color: var(--color-light-grey);
+}
+
+.testimonial__speech-bubble a{
+  color: var(--color-pink);
+}
+
+
+/* Contact */
+
+#contact {
+  background-color: var(--color-pink);
+  position: absolute;
+}
+
+.contact__title, 
+.contact__email,
+.contact__rights {
+  color: var(--color-white);
+}
+
+.contact__title {
+  margin: 32px 0 ;
+}
+
+.contact__links {
+  font-size: var(--font-large);
+  margin: 24px 0 ;
+}
+
+.contact__links i {
+  transition: all var(--annimation-duration);
+
+}
+
+.contact__list i:hover  {
+  transform: scale(1.1);
+  color: var(--color-white);
+}
