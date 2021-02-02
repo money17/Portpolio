@@ -25,3 +25,14 @@ navbarMenu.addEventListener('click', () => {
     const scrollTo = document.querySelector(link);
     scrollTo.scrollIntoView({ behavior: 'smooth' });
 });
+
+// Contact
+const homeContact = document.querySelector('.home__contact');
+homeContact.addEventListener('click', () => {
+    const target = event.target
+    const link = target.dataset.link
+    if (link != null) {
+        const scrollTo = document.querySelector(link);
+        scrollTo.scrollIntoView({ behavior: 'smooth' });
+    };
+});
