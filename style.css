@@ -347,8 +347,14 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
 }
 
+.work__projects.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
+}
 .project {
   position: relative;
   display: flex;
@@ -360,6 +366,9 @@ p {
   background-color: var(--color-light-white);
 }
 
+.project.invisible {
+  display: none;
+}
 .project__img {
   max-width: 100%;
   max-height: 100%;
@@ -468,6 +477,27 @@ p {
 .contact__links i:hover {
   transform: scale(1.1);
   color: var(--color-yellow);
+}
+
+/* Scroll */
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-size: 50px;
+  width: 70px;
+  height: 70px;
+  background-color: var(--color-pink);
+  color: var(--color-white);
+  border-radius: 50%;
+  transition: opacity 300ms ease-in;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* For below 768px screen width */
