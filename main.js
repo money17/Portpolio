@@ -20,10 +20,15 @@ navbarMenu.addEventListener('click', () => {
     const link = target.dataset.link
     if (link == null) {
         return;
-        console.log(link);
     };
+    navbarMenu.classList.remove('open');
     const scrollTo = document.querySelector(link);
     scrollTo.scrollIntoView({ behavior: 'smooth' });
+});
+
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', ()=>{
+    navbarMenu.classList.toggle('open');
 });
 
 // Contact
@@ -75,6 +80,13 @@ workBtnContainer.addEventListener('click', (e)=> {
     if (filter == null){
         return;
     }
+
+    // Remove selection from the previoius item and select the new one. 
+    const active = document.querySelector('.category__btn.selected')
+    active.classList.remove('selected');
+    const target = e.target.nodeName === 'BUTTON' ? e.target :
+                        e.target.parentNode;
+    e.target.classList.add('selected');
     projectContainer.classList.add('anim-out');
     setTimeout(() => {
         projects.forEach((project) => {
